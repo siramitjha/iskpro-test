@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Iskpro Test</title>
+      <style>
+        .aware-text,h2{text-align:center}*,::after,::before{box-sizing:border-box}.ciclegraph{position:relative;width:500px;height:500px;margin:calc(100px / 2 + 0px)}.report{display:flex;align-items:center;justify-content:center}.ciclegraph:before{content:"";position:absolute;top:0;left:0;border:10px solid #e5e5e5;width:calc(100% - 2px * 2);height:calc(100% - 2px * 2);border-radius:50%}.aware-text,.ciclegraph .circle{position:absolute;top:50%;left:50%}.ciclegraph .circle{width:100px;height:100px;margin:calc(-100px / 2);border:6px solid #389ada;border-radius:50%;background-color:#fff}.ciclegraph .circle h6,.report{color:#389ada;font-weight:600;font-family:sans-serif;font-size:22px}.ciclegraph .circle h6:hover{color:#8d3946}.ciclegraph .circle p,.report{color:#000;font-weight:600;font-family:sans-serif;font-size:22px}.ciclegraph .circle img{display:block;margin-left:auto;margin-right:auto;padding: 17px;z-index:9999}.ciclegraph .circle .report-caption{position:absolute;top: -25px;left:-220px}.ciclegraph .circle .report-caption-1{position:absolute;top: -42px;right: -180px;}.ciclegraph .circle .report-caption-2{position:absolute;top: -42px;right: -226px;}.ciclegraph .circle .report-caption-3{position:absolute;top:0;right:-220px}.ciclegraph .circle .report-caption-4{position:absolute;top:0;left:-165px}.ciclegraph .circle .report-caption-5{position:absolute;top: -25px;left:-125px}.ciclegraph .circle .report-caption-7{position:absolute;bottom:50px;right:0;word-break:normal}.ciclegraph .circle .report-description{position:absolute;bottom: 10px;left:-176px}.ciclegraph .circle .report-description-1{position:absolute;bottom: 26px;right: -182px;}.ciclegraph .circle .report-description-2{position:absolute;bottom: 31px;right: -224px;}.ciclegraph .circle .report-description-3{position:absolute;bottom: 31px;right: -224px;}.ciclegraph .circle .report-description-4{position:absolute;bottom:38px;left:-166px}.ciclegraph .circle .report-description-5{position:absolute;bottom: 10px;left:-186px}.ciclegraph .circle .report-description-7{position:absolute;bottom:117px;left:107px}.m-auto{margin:0 auto}h2{color:#012060;font-size:40px}.aware-text{transform:translate(-50%,-50%);width:150px;font-size:11px;font-family:sans-serif;font-weight:400}.ciclegraph .description{color:#000;text-align:right;font-size:11px;width:150px;margin-top:20px}.hide{display:none;}.report:hover+.hide{display:block;color:#000}button{background-color:transparent;border:1px solid #8d3946;padding:7px 20px;border-radius:5px}.heading{padding:0 0 100px}
+      </style>
+   </head>
+   <body>
+      <div class="heading">
+         <h2>What You will Get In The Report</h2>
+      </div>
+      <div class="ciclegraph m-auto">
+         <div class="aware-text">
+            <p>Be aware and equipped for informed decisions</p>
+            <button type="button">Let's Begin</button>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/sf-ultralight-filled/50/null/road.png" alt="image">
+            <h6 class="report report-caption-1">Alternet Routs</h6>
+            <div class="description report-description-1 hide ">AI-Tech helping you understand steps in your journey</div>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/external-smashingstocks-mixed-smashing-stocks/50/null/external-user-profile-agile-development-smashingstocks-mixed-smashing-stocks.png" alt="image">
+            <h6 class="report report-caption-2">Comparable Cases</h6>
+            <div class="description report-description-2 hide ">AI-Tech helping you understand steps in your journey</div>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/ios/50/null/test.png" alt="image">
+            <h6 class="report report-caption-3">Stress Assessment</h6>
+            <div class="description report-description-3 hide ">AI-Tech helping you understand steps in your journey</div>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/ios/50/null/personal-growth.png" alt="image">
+            <h6 class="report report-caption-4">Your Personal Preparedness</h6>
+            <div class="description report-description-4 hide">AI-Tech helping you understand steps in your journey</div>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/50/null/external-candidate-selection-at-personal-and-technical-round-interview-jobs-regular-tal-revivo.png" alt="image">
+            <h6 class="report report-caption-5">Eligibilty</h6>
+            <div class="description report-description-5 hide">AI-Tech helping you understand steps in your journey</div>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/material-two-tone/50/null/journey.png" alt="image">
+            <h6 class="report report-caption">Journey Explained</h6>
+            <div class="description report-description hide">AI-Tech helping you understand steps in your journey</div>
+         </div>
+         <div class="circle">
+            <img src="https://img.icons8.com/ios/50/null/timeline-week.png" alt="image">
+            <h6 class="report report-caption-7">Timeline Estimates</h6>
+            <div class="description report-description-7 hide ">AI-Tech helping you understand steps in your journey</div>
+         </div>
+      </div>
+      <script>
+         document.querySelectorAll( '.ciclegraph' ).forEach( ( ciclegraph )=>{
+           let circles = ciclegraph.querySelectorAll( '.circle' )
+           let angle = 360-90, dangle = 360 / circles.length
+           for( let i = 0; i < circles.length; ++i ){
+             let circle = circles[i]
+             angle += dangle
+             circle.style.transform = `rotate(${angle}deg) translate(${ciclegraph.clientWidth / 2}px) rotate(-${angle}deg)`
+           }
+         })
+               
+      </script> 
+   </body>
+</html>
